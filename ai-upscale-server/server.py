@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import hmac
 import json
 import os
@@ -13,6 +14,7 @@ import subprocess
 import threading
 import time
 import urllib.parse
+import urllib.error
 import urllib.request
 import xml.etree.ElementTree as ET
 from http import HTTPStatus
@@ -43,6 +45,8 @@ KEY_PATTERN = re.compile(r"^[A-Za-z0-9._-]+$")
 JOBS: dict[str, dict[str, object]] = {}
 JOBS_LOCK = threading.Lock()
 JOB_QUEUE: queue.Queue[str] = queue.Queue()
+VALID_CLIENT_TOKENS: dict[str, float] = {}
+VALID_CLIENT_TOKENS_LOCK = threading.Lock()
 
 
 def response_for(rating_key: str) -> dict[str, object] | None:
@@ -257,6 +261,31 @@ def worker() -> None:
             JOB_QUEUE.task_done()
 
 
+def plex_token_is_valid(token: str) -> bool:
+    if not token:
+        return False
+    if hmac.compare_digest(token, PLEX_TOKEN):
+        return True
+    fingerprint = hashlib.sha256(token.encode()).hexdigest()
+    now = time.monotonic()
+    with VALID_CLIENT_TOKENS_LOCK:
+        if VALID_CLIENT_TOKENS.get(fingerprint, 0) > now:
+            return True
+    request = urllib.request.Request(
+        f"{PLEX_URL}/library/sections",
+        headers={"X-Plex-Token": token, "Accept": "application/xml"},
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=5) as response:
+            valid = response.status == HTTPStatus.OK
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError):
+        valid = False
+    if valid:
+        with VALID_CLIENT_TOKENS_LOCK:
+            VALID_CLIENT_TOKENS[fingerprint] = now + 300
+    return valid
+
+
 class Handler(BaseHTTPRequestHandler):
     server_version = "PlexAiUpscale/1.0"
 
@@ -319,7 +348,7 @@ class Handler(BaseHTTPRequestHandler):
 
     def authorized(self) -> bool:
         supplied = self.headers.get("X-Plex-Token", "")
-        if PLEX_TOKEN and hmac.compare_digest(supplied, PLEX_TOKEN):
+        if plex_token_is_valid(supplied):
             return True
         self.send_json(HTTPStatus.UNAUTHORIZED, {"error": "unauthorized"})
         return False
