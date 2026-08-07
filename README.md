@@ -9,6 +9,27 @@ Plex Play Android의 공식 APK 업데이트 채널입니다.
 - 지원 기기: 휴대폰, 태블릿·폴더블, Android TV·OTT
 - 지원 ABI: ARM64, ARM, x86, x86_64
 
+[최신 APK 다운로드](https://github.com/bluemirr8520-lgtm/plex-play-updates/releases/latest/download/PlexPlay.apk) · [전체 사용 설명서](USER_GUIDE.md) · [최신 릴리스](https://github.com/bluemirr8520-lgtm/plex-play-updates/releases/latest)
+
+## 주요 기능
+
+- Plex 계정 로그인과 등록 서버 자동 연결
+- Plex 스타일 홈, 전체 검색, 라이브러리 수동 순서 지정
+- 라이브러리별 최근 추가·이어보기·시청 완료·전체 목록
+- 프로그램·시즌·에피소드 탐색과 미시청 에피소드 수 표시
+- 출연 배우의 다른 작품과 비슷한 장르 작품 표시
+- 원본 재생과 Plex 1080p·720p·480p 품질 변환
+- 이전화·다음화와 같은 시즌 다음화 자동재생
+- 재생 배속, 오디오 트랙, 내장·외부·Plex 자막 선택
+- 한국어 자동 자막, a시네마B·M·L, 사용자 TTF/OTF 글꼴
+- 자막 크기·위치·색상·외곽선·배경과 세로쓰기
+- 화면 모드·고급 화면 설정과 독립 저장 슬롯 1·2·3
+- 휴대폰 터치 제스처와 Android TV·OTT 리모컨 조작
+- 기기 성능 자동 최적화와 캐시 삭제
+- SHA-256 검증을 포함한 자동 업데이트 확인
+
+자세한 설치, 메뉴, 모바일 제스처, OTT 리모컨 키, 자막·화면 설정 및 문제 해결은 [Plex Play 3.19.0 사용 설명서](USER_GUIDE.md)를 확인하세요.
+
 ## 설치
 
 1. [PlexPlay.apk](https://github.com/bluemirr8520-lgtm/plex-play-updates/releases/latest/download/PlexPlay.apk)를 내려받습니다.
@@ -26,5 +47,3 @@ SHA-256:
 ```text
 0fbf13d0244bf6ffa5b947db462b9d70a918a400cce834df7d2429e019626828  PlexPlay.apk
 ```
-
-[릴리스와 변경 사항 보기](https://github.com/bluemirr8520-lgtm/plex-play-updates/releases/latest)
