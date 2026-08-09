@@ -1,7 +1,7 @@
-# Plex Play 3.19.5 사용 설명서
+# Plex Play 3.19.7 사용 설명서
 
 Plex Play는 개인 Plex Media Server의 콘텐츠를 Android 휴대폰, 태블릿·폴더블,
-Android TV·OTT 기기에서 탐색하고 재생하는 앱입니다. 이 문서는 3.19.5 버전을
+Android TV·OTT 기기에서 탐색하고 재생하는 앱입니다. 이 문서는 3.19.7 버전을
 기준으로 작성되었습니다.
 
 ## 1. 지원 환경
