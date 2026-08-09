@@ -4,7 +4,7 @@ Plex Play Android의 공식 APK 업데이트 채널입니다.
 
 ## 최신 버전
 
-- 버전: **3.19.21**
+- 버전: **3.19.22**
 - Android: 8.0(API 26) 이상
 - 지원 기기: 휴대폰, 태블릿·폴더블, Android TV·OTT
 - 지원 ABI: ARM64, ARM, x86, x86_64
@@ -30,7 +30,7 @@ Plex Play Android의 공식 APK 업데이트 채널입니다.
 - 최신형 앱 아이콘, Android 13 테마 아이콘, Android TV 배너
 - SHA-256 검증을 포함한 자동 업데이트 확인
 
-자세한 설치, 메뉴, 모바일 제스처, OTT 리모컨 키, 자막·화면 설정 및 문제 해결은 [Plex Play 3.19.21 사용 설명서](USER_GUIDE.md)를 확인하세요.
+자세한 설치, 메뉴, 모바일 제스처, OTT 리모컨 키, 자막·화면 설정 및 문제 해결은 [Plex Play 3.19.22 사용 설명서](USER_GUIDE.md)를 확인하세요.
 
 ## 설치
 
@@ -47,5 +47,5 @@ Plex Play Android의 공식 APK 업데이트 채널입니다.
 SHA-256:
 
 ```text
-edb84c3650cda188b525bd082973d157a2d5a486abb6be4eafd8d465731ea95b  PlexPlay.apk
+aaaeef7f8843a040ecd987e08037ea24c73987c0d76447dd647f792ec2893cb7  PlexPlay.apk
 ```
