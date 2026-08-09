@@ -4,7 +4,7 @@ Plex Play Android의 공식 APK 업데이트 채널입니다.
 
 ## 최신 버전
 
-- 버전: **3.19.22**
+- 버전: **3.19.23**
 - Android: 8.0(API 26) 이상
 - 지원 기기: 휴대폰, 태블릿·폴더블, Android TV·OTT
 - 지원 ABI: ARM64, ARM, x86, x86_64
@@ -21,7 +21,7 @@ Plex Play Android의 공식 APK 업데이트 채널입니다.
 - 원본 재생과 Plex 1080p·720p·480p 품질 변환
 - 이전화·다음화와 같은 시즌 다음화 자동재생
 - 재생 배속, 오디오 트랙, 내장·외부·Plex 자막 선택
-- 호환 변환 영상의 한국어 내장 자막 자동 적용과 현재 위치 전환
+- 자동 호환 변환 없는 원본 직접 재생과 사용자 선택 품질 변환
 - 한국어 자동 자막, a시네마B·M·L, 사용자 TTF/OTF 글꼴
 - 자막 크기·위치·색상·외곽선·배경과 세로쓰기
 - 화면 모드·고급 화면 설정과 독립 저장 슬롯 1·2·3
@@ -30,7 +30,7 @@ Plex Play Android의 공식 APK 업데이트 채널입니다.
 - 최신형 앱 아이콘, Android 13 테마 아이콘, Android TV 배너
 - SHA-256 검증을 포함한 자동 업데이트 확인
 
-자세한 설치, 메뉴, 모바일 제스처, OTT 리모컨 키, 자막·화면 설정 및 문제 해결은 [Plex Play 3.19.22 사용 설명서](USER_GUIDE.md)를 확인하세요.
+자세한 설치, 메뉴, 모바일 제스처, OTT 리모컨 키, 자막·화면 설정 및 문제 해결은 [Plex Play 3.19.23 사용 설명서](USER_GUIDE.md)를 확인하세요.
 
 ## 설치
 
@@ -47,5 +47,5 @@ Plex Play Android의 공식 APK 업데이트 채널입니다.
 SHA-256:
 
 ```text
-aaaeef7f8843a040ecd987e08037ea24c73987c0d76447dd647f792ec2893cb7  PlexPlay.apk
+7e4e71d35fe7d55c91ddf8560e5d3b7fbf5e945dc3bbaf1b8456ab6b5c2dc67d  PlexPlay.apk
 ```
